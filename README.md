@@ -78,11 +78,15 @@ Copy `backend/.env.example` to `backend/.env` and fill in:
 | `LLM_BASE_URL` | OpenAI-compatible base URL         | `https://api.openai.com/v1`   |
 | `LLM_MODEL`    | Model name                         | `gpt-4o-mini`                 |
 
-Works with any OpenAI-compatible provider:
-- OpenAI: `LLM_BASE_URL=https://api.openai.com/v1`
-- Groq: `LLM_BASE_URL=https://api.groq.com/openai/v1`
-- Together: `LLM_BASE_URL=https://api.together.xyz/v1`
-- Ollama: `LLM_BASE_URL=http://localhost:11434/v1`
+Works with **any OpenAI-compatible LLM provider**:
+
+| Provider | `LLM_BASE_URL` | Recommended `LLM_MODEL` |
+|---|---|---|
+| **Groq (Free & Fast)** | `https://api.groq.com/openai/v1` | `qwen/qwen3.8-27b` or `llama-3.3-70b-versatile` |
+| **OpenAI** | `https://api.openai.com/v1` | `gpt-4o-mini` or `gpt-4o` |
+| **Google Gemini** | `https://generativelanguage.googleapis.com/v1beta/openai` | `gemini-2.0-flash` |
+| **Together AI** | `https://api.together.xyz/v1` | `meta-llama/Llama-3.3-70B-Instruct-Turbo` |
+| **Ollama (Local)** | `http://localhost:11434/v1` | `llama3.2` or `mistral` |
 
 ---
 
