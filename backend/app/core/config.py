@@ -1,6 +1,11 @@
 import os
 from functools import lru_cache
+from pathlib import Path
+
 from pydantic_settings import BaseSettings
+
+
+ENV_FILE = Path(__file__).resolve().parents[2] / ".env"
 
 
 class Settings(BaseSettings):
@@ -22,7 +27,7 @@ class Settings(BaseSettings):
     request_timeout: int = 6
 
     class Config:
-        env_file = ".env"
+        env_file = ENV_FILE
         env_file_encoding = "utf-8"
 
     def validate_llm_config(self) -> None:

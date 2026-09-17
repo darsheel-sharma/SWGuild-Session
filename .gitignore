@@ -30,5 +30,3 @@ frontend/.vite/
 *.swo
 .DS_Store
 
-# Docker
-*.override.yml

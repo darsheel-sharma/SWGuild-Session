@@ -13,7 +13,6 @@ AI Council is a multi-agent debate system. You ask a question, four specialized 
 - **Provider-agnostic LLM** — works with OpenAI, Together AI, Groq, Ollama, or any OpenAI-compatible API
 - **Dark-first UI** — clean, minimal, responsive
 - **FastAPI backend** — async, typed, layered architecture
-- **Docker ready** — one command to run everything
 
 ---
 
@@ -63,7 +62,6 @@ ai-council/
 │       ├── schemas/      # Pydantic models
 │       └── core/         # Config, security
 │
-└── docker-compose.yml
 ```
 
 ---
@@ -121,21 +119,6 @@ npm run dev
 ```
 
 App: http://localhost:5173
-
----
-
-## Docker
-
-```bash
-# Create backend/.env with your API key first
-cd backend && cp .env.example .env
-
-# From project root
-docker-compose up --build
-```
-
-Frontend → http://localhost:5173  
-Backend → http://localhost:8000
 
 ---
 
