@@ -30,3 +30,4 @@ frontend/.vite/
 *.swo
 .DS_Store
 
+*.md
